@@ -1,0 +1,17 @@
+applications:
+  - name: sc-ribbon
+    path: target/SpringCloud-Ribbon-0.0.1-SNAPSHOT.jar
+    routes:
+      - route: sc-ribbon.cfapps.io
+    memory: 1G
+    instances: 1
+    env:
+    #      GRANT_TYPE: client_credentials
+    #    SECURITY_USER_NAME: actuator
+    #    SECURITY_USER_PASSWORD: operations4red
+    services:
+      - my-service-registry
+#      - tracker-service-registry
+#      - tracker-circuit-breaker-dashboard
+#      - tracker-sso
+#      - tracker-config-server
